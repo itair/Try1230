@@ -117,17 +117,25 @@ void main()
   ////STL 中的几个方法  for_each , replace , transform
   longline(4);
   //4
-  stringy beany;
-  char testing[] = "Reality isn't what it used to be.";
-  StringySet(beany, testing);
-  StringyShow(beany);
-  StringyShow(beany, 2);
-  testing[0] = 'D';
-  testing[1] = 'u';
-  StringyShow(testing);
-  StringyShow(testing, 3);
-  StringyShow("Done!");
-
+  //stringy beany;
+  //char testing[] = "Reality isn't what it used to be.";
+  //StringySet(beany, testing);
+  //StringyShow(beany);
+  //StringyShow(beany, 2);
+  //testing[0] = 'D';
+  //testing[1] = 'u';
+  //StringyShow(testing);
+  //StringyShow(testing, 3);
+  //StringyShow("Done!");
+  //默认参数值 函数重载
+  longline(5);
+  //5
+  int nubset[5] = { 2, 4, 55, 62, 38};
+  int maxnub = Max5(nubset);
+  cout << "nubset" << ":" << "the max one is : " << maxnub <<endl;
+  double nddset[5] = { 1.0, 3.2, 3.6, 1.3, 6.5};
+  double maxndd = Max5(nddset);
+  cout << "vddset" << ":" << "the max one is : " << maxndd <<endl;
   longline();
   system("pause");
 }
