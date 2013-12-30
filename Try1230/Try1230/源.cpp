@@ -47,6 +47,34 @@ void LowerSwap(string& str) {
 }
 //STL 中的几个方法  for_each , replace , transform
 
+void StringySet(stringy &str, char* pch) {
+  str.ct = strlen(pch);
+  str.str = new char[str.ct];
+  strcpy(str.str, pch);
+  return;
+}
+
+void StringyShow(stringy& str, const int n) {
+  if (n > 0) {    
+     int i = n;
+    while (i--)  {
+      cout  << str.str << str.ct << endl;
+    }
+  }
+  return;
+}
+
+void StringyShow(const char* pch, const int n) {
+  if (n > 0) {  
+    int i = n;
+    while (i--)  {
+      cout << pch << endl;
+    }
+  }
+  return;
+}
+
+
 void main()
 {
   showtitle();
@@ -71,24 +99,34 @@ void main()
   // 结构体 引用
   longline(3);
   //3
-  string upperstr ="What the hell! BY Itair.";
-  string & str_alias = upperstr;
-  cout << "upperstr : " << upperstr << endl;
-  cout << "str_alias : " << str_alias << endl;
-  LowerSwap(str_alias);  
-  cout << "upperstr : " << upperstr << endl;
-  cout << "str_alias : " << str_alias << endl;
-  cout << "Enter a string ( q to quit) :";
-  getline(cin, upperstr);
-  while (upperstr != "q") {
-    LowerSwap(upperstr);
-    cout << upperstr << endl;
-    cout << "Next string (q to quit) :";
-    getline(cin, upperstr);
-  }
-  //STL 中的几个方法  for_each , replace , transform
+  //string upperstr ="What the hell! BY Itair.";
+  //string & str_alias = upperstr;
+  //cout << "upperstr : " << upperstr << endl;
+  //cout << "str_alias : " << str_alias << endl;
+  //LowerSwap(str_alias);  
+  //cout << "upperstr : " << upperstr << endl;
+  //cout << "str_alias : " << str_alias << endl;
+  //cout << "Enter a string ( q to quit) :";
+  //getline(cin, upperstr);
+  //while (upperstr != "q") {
+  //  LowerSwap(upperstr);
+  //  cout << upperstr << endl;
+  //  cout << "Next string (q to quit) :";
+  //  getline(cin, upperstr);
+  //}
+  ////STL 中的几个方法  for_each , replace , transform
   longline(4);
   //4
+  stringy beany;
+  char testing[] = "Reality isn't what it used to be.";
+  StringySet(beany, testing);
+  StringyShow(beany);
+  StringyShow(beany, 2);
+  testing[0] = 'D';
+  testing[1] = 'u';
+  StringyShow(testing);
+  StringyShow(testing, 3);
+  StringyShow("Done!");
 
   longline();
   system("pause");

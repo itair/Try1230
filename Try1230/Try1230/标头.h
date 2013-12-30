@@ -12,6 +12,11 @@ struct CandyBar {
   int energy;
 };
 
+struct stringy {
+  char* str;
+  int ct;
+};
+
 //ÄÚÁª
 inline void showtitle(void) { 
   std::cout<< "C++_Primer_Plus\n" << "    by itAir\n" << "Hello World!\n\n";
@@ -32,4 +37,7 @@ void ShowCandyBar(const CandyBar&);
 
 void LowerSwap(std::string&);
 
+void StringySet(stringy&, char*);
+void StringyShow(stringy&, const int n = 1 );
+void StringyShow(const char*, const int n = 1);
 #endif //TRY1230_TRY1230_TRY_H
