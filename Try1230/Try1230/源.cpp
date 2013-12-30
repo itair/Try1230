@@ -4,6 +4,11 @@
 
 #include "标头.h"
 #include <iostream>
+#include <string>
+#include "ctype.h"
+#include <algorithm>
+#include <numeric>
+
 
 static int sTime(0);
 
@@ -36,6 +41,12 @@ void ShowCandyBar(const CandyBar& cb) {
   return;
 }
 
+void LowerSwap(string& str) { 
+  transform(str.begin(), str.end(), str.begin(), toupper);
+  return ;
+}
+//STL 中的几个方法  for_each , replace , transform
+
 void main()
 {
   showtitle();
@@ -58,6 +69,16 @@ void main()
   FillCandyBar(cb, "Millennium Munch", 2.85, 350 );
   ShowCandyBar(cb);
   // 结构体 引用
+  longline(3);
+  //3
+  string upperstr ="What the hell! BY Itair.";
+  string & str_alias = upperstr;
+  cout << "upperstr : " << upperstr << endl;
+  cout << "str_alias : " << str_alias << endl;
+  LowerSwap(str_alias);  
+  cout << "upperstr : " << upperstr << endl;
+  cout << "str_alias : " << str_alias << endl;
+  //STL 中的几个方法  for_each , replace , transform
 
   longline();
   system("pause");

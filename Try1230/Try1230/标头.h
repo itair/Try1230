@@ -1,17 +1,17 @@
 #ifndef TRY1230_TRY1230_TRY_H
 #define TRY1230_TRY1230_TRY_H
-
-#include <tchar.h>
 #include <iostream>
 
 //常量
 const int kSize(40);
+
 //类与结构
 struct CandyBar {
   char brand[kSize];
   double weight;
   int energy;
 };
+
 //内联
 inline void showtitle(void) { 
   std::cout<< "C++_Primer_Plus\n" << "    by itAir\n" << "Hello World!\n\n";
@@ -29,5 +29,7 @@ void OutputChars(char*, int);
 
 void FillCandyBar(CandyBar&, const char*, const double, const int);
 void ShowCandyBar(const CandyBar&);
+
+void LowerSwap(std::string&);
 
 #endif //TRY1230_TRY1230_TRY_H
