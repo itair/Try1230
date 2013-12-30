@@ -21,6 +21,21 @@ void OutputChars(char* p_ch) {
   cout << p_ch << endl; 
   return;
 }
+
+void FillCandyBar(CandyBar& cb, const char* str, const double wt, const int en) {
+  strcpy_s(cb.brand, str);
+  cb.weight = wt;
+  cb.energy = en;
+  return;
+}
+
+void ShowCandyBar(const CandyBar& cb) {
+  cout << "CandyBar Brand: " << cb.brand << endl
+        << "Weight: " << cb.weight << endl
+        << "Engery: " << cb.energy << endl;
+  return;
+}
+
 void main()
 {
   showtitle();
@@ -37,9 +52,12 @@ void main()
   cout << "______10234" << endl;
   OutputChars(str, 10234);
   //函数 多态 和重载
-
-
-
+  longline(2);
+  //2
+  CandyBar cb;
+  FillCandyBar(cb, "Millennium Munch", 2.85, 350 );
+  ShowCandyBar(cb);
+  // 结构体 引用
 
   longline();
   system("pause");
