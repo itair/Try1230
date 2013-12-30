@@ -78,7 +78,17 @@ void main()
   LowerSwap(str_alias);  
   cout << "upperstr : " << upperstr << endl;
   cout << "str_alias : " << str_alias << endl;
+  cout << "Enter a string ( q to quit) :";
+  getline(cin, upperstr);
+  while (upperstr != "q") {
+    LowerSwap(upperstr);
+    cout << upperstr << endl;
+    cout << "Next string (q to quit) :";
+    getline(cin, upperstr);
+  }
   //STL 中的几个方法  for_each , replace , transform
+  longline(4);
+  //4
 
   longline();
   system("pause");
