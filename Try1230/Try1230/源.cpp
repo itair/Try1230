@@ -1,8 +1,8 @@
-/*C++ Primer Plus ¿ÎºóÏ°Ìâ p298 8.8
+/*C++ Primer Plus è¯¾åä¹ é¢˜ p298 8.8
  by itAir
  Try to use Google C++ programing style    */    
 
-#include "±êÍ·.h"
+#include "æ ‡å¤´.h"
 #include <iostream>
 #include <string>
 #include "ctype.h"
@@ -44,7 +44,7 @@ void LowerSwap(string& str) {
   transform(str.begin(), str.end(), str.begin(), toupper);
   return ;
 }
-//STL ÖĞµÄ¼¸¸ö·½·¨  for_each , replace , transform
+//STL ä¸­çš„å‡ ä¸ªæ–¹æ³•  for_each , replace , transform
 
 void StringySet(stringy &str, char* pch) {
   str.ct = strlen(pch);
@@ -89,13 +89,13 @@ void main()
   OutputChars(str, 2);
   cout << "______10234" << endl;
   OutputChars(str, 10234);
-  //º¯Êı ¶àÌ¬ ºÍÖØÔØ
+  //å‡½æ•° å¤šæ€ å’Œé‡è½½
   longline(2);
   //2
   CandyBar cb;
   FillCandyBar(cb, "Millennium Munch", 2.85, 350 );
   ShowCandyBar(cb);
-  // ½á¹¹Ìå ÒıÓÃ
+  // ç»“æ„ä½“ å¼•ç”¨
   longline(3);
   //3
   //string upperstr ="What the hell! BY Itair.";
@@ -113,7 +113,7 @@ void main()
   //  cout << "Next string (q to quit) :";
   //  getline(cin, upperstr);
   //}
-  ////STL ÖĞµÄ¼¸¸ö·½·¨  for_each , replace , transform
+  ////STL ä¸­çš„å‡ ä¸ªæ–¹æ³•  for_each , replace , transform
   longline(4);
   //4
   //stringy beany;
@@ -126,7 +126,7 @@ void main()
   //StringyShow(testing);
   //StringyShow(testing, 3);
   //StringyShow("Done!");
-  //Ä¬ÈÏ²ÎÊıÖµ º¯ÊıÖØÔØ
+  //é»˜è®¤å‚æ•°å€¼ å‡½æ•°é‡è½½
   longline(5);
   //5
   int nubset[5] = { 2, 4, 55, 62, 38};
@@ -135,7 +135,7 @@ void main()
   double nddset[5] = { 1.0, 3.2, 3.6, 1.3, 6.5};
   double maxndd = Max5(nddset);
   cout << "vddset" << ":" << "the max one is : " << maxndd <<endl;
-  //Ä£°åµÄ¼òµ¥ÊµÏÖ 
+  //æ¨¡æ¿çš„ç®€å•å®ç° 
   longline(6);
   //6
   int testint[6] = { 1, 2, 3, 4, 5, 0};

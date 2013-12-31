@@ -3,10 +3,10 @@
 #include <iostream>
 #include <string>
 
-//³£Á¿
+//å¸¸é‡
 const int kSize(40);
 
-//ÀàÓë½á¹¹
+//ç±»ä¸ç»“æ„
 struct CandyBar {
   char brand[kSize];
   double weight;
@@ -18,7 +18,7 @@ struct stringy {
   int ct;
 };
 
-//ÄÚÁª
+//å†…è”
 inline void showtitle(void) { 
   std::cout<< "C++_Primer_Plus\n" << "    by itAir\n" << "Hello World!\n\n";
 }
@@ -28,7 +28,7 @@ inline void longline(void) {
 inline void longline(const int i) { 
   std::cout<<i<< ".______________________________\n\n"; 
 }
-//Ä£°æ
+//æ¨¡ç‰ˆ
 template <typename T>
 const T Max5(T a[5]) {
   T maxt = a[0];
@@ -46,7 +46,7 @@ T* Maxn(T* ar[], int num) {
 }
 
 //char* Maxn(char* ar[], int num); 
-//Ã²ËÆ²»Ö§³ÖÏÔÊ¾ÉùÃ÷??
+//è²Œä¼¼ä¸æ”¯æŒæ˜¾ç¤ºå£°æ˜??
 
 template <typename T>
 const T Maxn(T ar[], int num) {
@@ -58,9 +58,9 @@ const T Maxn(T ar[], int num) {
 }
 
 
-// Ä£°æÖØÔØ Óë ÏÔÊ¾ÉùÃ÷
+// æ¨¡ç‰ˆé‡è½½ ä¸ æ˜¾ç¤ºå£°æ˜
 
-//È«¾Öº¯Êı
+//å…¨å±€å‡½æ•°
 void OutputChars(char*);
 void OutputChars(char*, int);
 
