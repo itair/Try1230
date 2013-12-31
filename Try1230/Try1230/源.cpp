@@ -9,7 +9,6 @@
 #include <algorithm>
 #include <numeric>
 
-
 static int sTime(0);
 
 using namespace std;
@@ -80,7 +79,7 @@ void main()
   showtitle();
   longline(1);
   //1  
-  char str[20] = "Wo lei ge qu!";
+  char str[14] = "Wo lei ge qu!";
   OutputChars(str);
   cout << "______ 0" << endl;
   OutputChars(str, 0);
@@ -136,6 +135,20 @@ void main()
   double nddset[5] = { 1.0, 3.2, 3.6, 1.3, 6.5};
   double maxndd = Max5(nddset);
   cout << "vddset" << ":" << "the max one is : " << maxndd <<endl;
+  //模板的简单实现 
+  longline(6);
+  //6
+  int testint[6] = { 1, 2, 3, 4, 5, 0};
+  double testdouble[4] = { 0.1, 2.3, 5.2, 9.9};
+  char* testpchar[5] = {"Show", "me", "the", "money", "ok?"}; 
+  int result_int = Maxn(testint, 6);
+  double result_double = Maxn(testdouble, 4);
+  
+  const char* result_pchar = Maxn(testpchar, 5);
+  cout << "Max int is " << result_int << endl
+       << "Max double is " << result_double << endl
+       << "Longest string is " << result_pchar << endl;
+
   longline();
   system("pause");
 }
