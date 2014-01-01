@@ -148,7 +148,7 @@ void main()
   cout << "Max int is " << result_int << endl
        << "Max double is " << result_double << endl
        << "Longest string is " << result_pchar << endl;
-
+  //&#x8BD5;&#x4E00;&#x8BD5; utf-8 &#x7F16;&#x7801;&#x8F6C;&#x6362;&#x529F;&#x80FD;.
   longline();
   system("pause");
 }
