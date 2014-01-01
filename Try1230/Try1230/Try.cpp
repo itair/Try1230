@@ -2,7 +2,7 @@
  by itAir
  Try to use Google C++ programing style    */    
 
-#include "标头.h"
+#include "Try.h"
 #include <iostream>
 #include <string>
 #include "ctype.h"
@@ -89,7 +89,7 @@ void main()
   OutputChars(str, 2);
   cout << "______10234" << endl;
   OutputChars(str, 10234);
-  //函数 多态 和重载
+  // 函数 多态 和重载 ;
   longline(2);
   //2
   CandyBar cb;
@@ -116,17 +116,17 @@ void main()
   ////STL 中的几个方法  for_each , replace , transform
   longline(4);
   //4
-  //stringy beany;
-  //char testing[] = "Reality isn't what it used to be.";
-  //StringySet(beany, testing);
-  //StringyShow(beany);
-  //StringyShow(beany, 2);
-  //testing[0] = 'D';
-  //testing[1] = 'u';
-  //StringyShow(testing);
-  //StringyShow(testing, 3);
-  //StringyShow("Done!");
-  //默认参数值 函数重载
+  stringy beany;
+  char testing[] = "Reality isn't what it used to be.";
+  StringySet(beany, testing);
+  StringyShow(beany);
+  StringyShow(beany, 2);
+  testing[0] = 'D';
+  testing[1] = 'u';
+  StringyShow(testing);
+  StringyShow(testing, 3);
+  StringyShow("Done!");
+  //默认参数值 函数重载;
   longline(5);
   //5
   int nubset[5] = { 2, 4, 55, 62, 38};
@@ -144,11 +144,32 @@ void main()
   int result_int = Maxn(testint, 6);
   double result_double = Maxn(testdouble, 4);
   
-  const char* result_pchar = Maxn(testpchar, 5);
-  cout << "Max int is " << result_int << endl
-       << "Max double is " << result_double << endl
-       << "Longest string is " << result_pchar << endl;
+  char* result_pchar = Maxn(testpchar, 5);
+  cout << "Max int :" << result_int << endl
+       << "Max double i: " << result_double << endl
+       << "Longest string : " << result_pchar << endl;
   //&#x8BD5;&#x4E00;&#x8BD5; utf-8 &#x7F16;&#x7801;&#x8F6C;&#x6362;&#x529F;&#x80FD;.
+  longline(7);
+  //7
+  int things[6] = {13, 31, 103, 301, 310, 130};
+  struct debts mr_E[3] = { {"Ima Wolfe", 2400.0},
+                           {"Ura Foxe", 1300.0},
+                           {"Iby Strout", 1800.0} };
+  double* pd[3];
+  for (int i = 0; i < 3; i++)
+    pd[i] = &mr_E[i].amount;
+  cout << "Listing Mr. E's counts of things\n";
+  ShowArray(things, 6);
+  cout << "Listing Mr. E's debts :\n";
+  ShowArray(pd, 3);
+  cout << "Listing Mr. E's sum of things\n";
+  int sum1 = SumArray(things, 6);
+  cout << sum1 << endl;
+  cout << "Listing Mr. E's sum of debts\n";
+  int sum2 = SumArray(pd, 3);
+  cout << sum2 << endl;
+  //模板 重载 的调用选择策略
+
   longline();
   system("pause");
 }
